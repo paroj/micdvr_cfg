@@ -103,6 +103,7 @@ function make_option(cfg, doc) {
 var model = []
 
 function parse_file(ev) {
+	model = []
 	var txt = ev.target.result
 	var lines = txt.split("\n")
 	
@@ -131,7 +132,6 @@ function parse_file(ev) {
 	}
 
 	if(fw_ver == "unknown" || boot_ver == "unknown") {
-		model = []
 		alert("wrong file format")
 		return
 	}
