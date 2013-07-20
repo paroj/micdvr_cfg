@@ -1,0 +1,5 @@
+File Format Notes
+==================
+
+* parser probably ignores everything in the line after closing bracket ']'
+  ('Set Time Lapse Shooting' uses ',' instead of ';')

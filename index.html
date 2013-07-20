@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>808 #16 Keycam (Micro DVR) configurator</title>
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.css" />
+    <script src="micdvr_cfg.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+  	<div id="mainpane">
+  	<h1>808 #16 Keycam (Micro DVR) configurator</h1>
+	<input id="infile" type="file" accept="text/plain" onchange="load_file(this.files)" style="display: none"/>
+    <a id="outfile" download="SYSCFG.TXT" style="display: none"></a>
+  	<div id="accordion">
+  		<h3>Load Config</h3>
+  		<div>
+  			<table>
+  			<tr>
+  				<td>
+	  			<ol>
+	  				<li>Insert a microSD card into the camera
+					<li>Press and hold the shutter button, don't release it
+					<li>Press the power button for about 1 second and release it
+					<li>Release the shutter button when the light turns off
+					<li><button onclick="$('#infile').click()">Select SYSCFG.TXT</button> 
+					file that has been written in the root directory of the camera
+					    
+	  			</ol>
+  				</td>
+				<td><img alt="" src="camdesc.png"></td>
+			</tr>
+			</table>
+		</div>
+		<h3>Configure</h3>
+		<div>
+			<table id="config"></table>
+		</div>
+		<h3>Save Config</h3>
+		<div>
+		  	<table>
+  			<tr>
+  				<td>
+				<ol>
+	  				<li>Save the <button onclick="new_file()">new SYSCFG.TXT</button> file to the root directory of the camera
+					<li>Disconnect the camera from the computer
+					<li>Press and hold the shutter button, don't release it
+					<li>Press the power button for about 1 second and release it
+					<li>Release the shutter button when the light turns off
+					<li>The camera will accept the changes and automatically delete the file
+	  			</ol>
+  				</td>
+				<td><img alt="" src="camdesc.png"></td>
+			</tr>
+			</table>
+
+		</div>
+	</div>
+	</div>
+  </body>
+</html>
