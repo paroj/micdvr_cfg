@@ -130,6 +130,12 @@ function parse_file(ev) {
 		model.push([tok[0], tok[1]])
 	}
 
+	if(fw_ver == "unknown" || boot_ver == "unknown") {
+		model = []
+		alert("wrong file format")
+		return
+	}
+	
 	console.log("firmware version "+fw_ver)
 	console.log("bootloader version "+boot_ver)
 	create_interface()
